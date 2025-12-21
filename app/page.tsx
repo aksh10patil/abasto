@@ -26,7 +26,7 @@ const fadeInUp = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } // Custom cubic-bezier for "luxury" feel
+    transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] as const} // Custom cubic-bezier for "luxury" feel
   }
 };
 
@@ -46,7 +46,7 @@ const imageReveal = {
   visible: { 
     opacity: 1, 
     scale: 1,
-    transition: { duration: 1.5, ease: "easeOut" }
+    transition: { duration: 1.5, ease: "easeOut" as const }
   }
 };
 
