@@ -4,7 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Playfair_Display, Inter } from 'next/font/google';
-import SocialJournal from '@/components/SocialJournal';
+import SocialJournal from '@/components/landing/SocialJournal';
+import Hero from '@/components/main/Hero';
+import Philosophy from '@/components/landing/Philosophy';
+import Reviews from '@/components/main/Reviews';
 
 // --- Typography Setup ---
 // Loading fonts via Next.js for optimal performance
@@ -66,72 +69,6 @@ const Navbar = () => (
       Reserve
     </button>
   </nav>
-);
-
-const Hero = () => (
-  <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#0a0a0a]">
-    {/* Dark Overlay for Readability */}
-    <div className="absolute inset-0 bg-black/40 z-10" />
-    
-    {/* Background Image Placeholder - Replaced with actual assets in production */}
-    <motion.div 
-      className="absolute inset-0 z-0"
-      initial="hidden"
-      animate="visible"
-      variants={imageReveal}
-    >
-      <Image
-        src="/landing.jpg"
-        alt="Dark textural restaurant interior"
-        fill
-        className="object-cover opacity-80"
-        priority
-      />
-    </motion.div>
-
-    <motion.div 
-      className="relative z-20 text-center px-4"
-      initial="hidden"
-      animate="visible"
-      variants={fadeInUp}
-    >
-      <h2 className={`text-xs md:text-sm tracking-[0.3em] text-white/70 mb-6 uppercase ${inter.className}`}>
-        Est. 1990 — Reimagined 2025
-      </h2>
-      <h1 className={`text-5xl md:text-7xl lg:text-8xl text-[#f0f0f0] leading-tight ${playfair.className}`}>
-        Taste the <br /> 
-        <span className="italic font-light opacity-90">Silence.</span>
-      </h1>
-      <div className="mt-12">
-        <button className={`text-xs md:text-sm tracking-[0.2em] text-white border-b border-white/30 pb-2 hover:border-white transition-all duration-700 uppercase ${inter.className}`}>
-          Book a Table
-        </button>
-      </div>
-    </motion.div>
-  </section>
-);
-
-const Philosophy = () => (
-  <section className="py-32 md:py-48 bg-[#0c0c0c] text-[#e5e5e5] px-6">
-    <motion.div 
-      className="max-w-2xl mx-auto text-center"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
-    >
-      <span className={`block text-xs tracking-[0.2em] text-[#888] mb-8 uppercase ${inter.className}`}>
-        The Philosophy
-      </span>
-      <p className={`text-2xl md:text-4xl leading-[1.6] ${playfair.className} text-[#d4d4d4]`}>
-        We believe in the quiet authority of ingredients. 
-        <br />
-        A return to fire, earth, and patience. 
-        <br />
-        <span className="opacity-60 italic">Dining is not just consumption; it is a pause in time.</span>
-      </p>
-    </motion.div>
-  </section>
 );
 
 const MenuPreview = () => (
@@ -251,6 +188,7 @@ export default function LandingPage() {
       <Hero />
       <Philosophy />
       <MenuPreview />
+      <Reviews />
       <SocialJournal />
       <Atmosphere />
       <Footer />
