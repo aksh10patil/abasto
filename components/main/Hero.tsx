@@ -10,7 +10,7 @@ const playfair = Playfair_Display({ subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'] });
 
 // --- CONFIGURATION ---
-const MAIN_SLIDE_DURATION = 6000;   // Background changes every 6s
+const MAIN_SLIDE_DURATION = 8000;   // Background changes every 6s
 const KITCHEN_FEED_DURATION = 8000; // Left feed changes every 4s (faster, feels "live")
 
 // --- DATA: Main Background Slides ---
