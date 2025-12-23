@@ -24,8 +24,8 @@ const HERO_SLIDES = [
   {
     id: 2,
     src: "/landing/landing-2.jpg",
-    alt: "Smoked ribs on dark plate",
-    label: "Smoked Ribs & Ash"
+    alt: "The Ambience",
+    label: "The Ambience"
   },
   {
     id: 3,
