@@ -8,6 +8,8 @@ import SocialJournal from '@/components/landing/SocialJournal';
 import Hero from '@/components/main/Hero';
 import Philosophy from '@/components/landing/Philosophy';
 import Reviews from '@/components/main/Reviews';
+import Footer from '@/components/main/Footer';
+import Navbar from '@/components/main/Navbar';
 
 // --- Typography Setup ---
 // Loading fonts via Next.js for optimal performance
@@ -55,22 +57,6 @@ const imageReveal = {
 
 // --- Components ---
 
-const Navbar = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-6 mix-blend-difference text-white/90">
-    <div className={`text-sm tracking-[0.2em] uppercase ${inter.className}`}>
-      ABASTO
-    </div>
-    <div className="hidden md:flex gap-12 text-xs tracking-[0.15em] font-light">
-      <span className="cursor-pointer hover:text-white/70 transition-colors">Philosophy</span>
-      <span className="cursor-pointer hover:text-white/70 transition-colors">Menu</span>
-      <span className="cursor-pointer hover:text-white/70 transition-colors">Spaces</span>
-    </div>
-    <button className={`text-xs border border-white/30 px-6 py-3 uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-500 ${inter.className}`}>
-      Reserve
-    </button>
-  </nav>
-);
-
 const MenuPreview = () => (
   <section className="py-24 bg-[#0a0a0a] border-t border-white/5 px-6 md:px-12">
     <div className="max-w-5xl mx-auto">
@@ -103,7 +89,7 @@ const MenuPreview = () => (
       </motion.div>
       
       <div className="mt-24 text-center">
-        <a href="#" className={`inline-block text-xs tracking-[0.2em] uppercase text-[#888] hover:text-white transition-colors duration-500 border border-white/10 px-8 py-4 ${inter.className}`}>
+        <a href="menu" className={`inline-block text-xs tracking-[0.2em] uppercase text-[#888] hover:text-white transition-colors duration-500 border border-white/10 px-8 py-4 ${inter.className}`}>
           View Full Menu
         </a>
       </div>
@@ -150,34 +136,6 @@ const Atmosphere = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="bg-[#050505] text-[#999] py-24 px-6 border-t border-white/5">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
-      
-      <div className="space-y-6">
-        <h5 className={`text-white text-lg tracking-widest uppercase mb-8 ${inter.className}`}>ABASTO</h5>
-        <div className={`space-y-2 text-sm font-light ${inter.className}`}>
-          <p>Via San Gottardo 32, 6596</p>
-          <p>Gordola, Svizzera</p>
-        </div>
-        <div className={`space-y-2 text-sm font-light ${inter.className} pt-4`}>
-          <p>Tue — Sun: 17:30 — Late</p>
-          <p>Mon: Closed</p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-start md:items-end">
-        <a href="mailto:reservations@ABASTO.com" className={`text-xl md:text-2xl text-[#d4d4d4] hover:text-white transition-colors mb-6 ${playfair.className} italic`}>
-          reservations@abasto.com
-        </a>
-        <p className={`text-xs tracking-widest uppercase opacity-40 ${inter.className}`}>
-          © 2025 ABASTO Restaurant. All Rights Reserved.
-        </p>
-      </div>
-
-    </div>
-  </footer>
-);
 
 // --- Main Page Component ---
 
