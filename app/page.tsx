@@ -1,6 +1,5 @@
 "use client";
 
-
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SocialJournal from "@/components/landing/SocialJournal";
@@ -9,7 +8,6 @@ import Philosophy from "@/components/landing/Philosophy";
 import Reviews from "@/components/main/Reviews";
 import Footer from "@/components/main/Footer";
 import Navbar from "@/components/main/Navbar";
-
 
 // --- Animation Variants (Strict & Subtle) ---
 const fadeInUp = {
@@ -53,14 +51,8 @@ const MenuPreview = () => (
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <h3
-          className={`text-4xl md:text-5xl  text-white mb-4`}
-        >
-          The Edit
-        </h3>
-        <p
-          className={`text-sm text-[#666] tracking-widest uppercase `}
-        >
+        <h3 className={`text-4xl md:text-5xl  text-white mb-4`}>The Edit</h3>
+        <p className={`text-sm text-[#666] tracking-widest uppercase `}>
           Season 04
         </p>
       </motion.div>
@@ -106,9 +98,7 @@ const MenuCategory = ({ title, items }: { title: string; items: string[] }) => (
     variants={fadeInUp}
     className="flex flex-col items-center md:items-start"
   >
-    <h4 className={`text-2xl text-[#c0c0c0] mb-6 italic `}>
-      {title}
-    </h4>
+    <h4 className={`text-2xl text-[#c0c0c0] mb-6 italic `}>{title}</h4>
     <ul className={`space-y-4 text-center md:text-left `}>
       {items.map((item, i) => (
         <li
@@ -133,22 +123,14 @@ const Atmosphere = () => (
           className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105 opacity-80 group-hover:opacity-100"
         />
         <div className="absolute bottom-8 left-8 text-white z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-          <span
-            className={`text-xs tracking-widest uppercase `}
-          >
-            Craft
-          </span>
+          <span className={`text-xs tracking-widest uppercase `}>Craft</span>
         </div>
       </div>
       <div className="bg-[#111] flex flex-col justify-center items-center p-12 text-center">
-        <h3
-          className={`text-3xl md:text-4xl text-[#e5e5e5] mb-6 `}
-        >
+        <h3 className={`text-3xl md:text-4xl text-[#e5e5e5] mb-6 `}>
           The Room
         </h3>
-        <p
-          className={`text-[#888] max-w-md leading-relaxed font-light `}
-        >
+        <p className={`text-[#888] max-w-md leading-relaxed font-light `}>
           Designed for privacy and conversation. Shadows, linen, and the soft
           clink of crystal. A space outside of the city's tempo.
         </p>

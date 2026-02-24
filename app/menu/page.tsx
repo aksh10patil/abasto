@@ -132,11 +132,7 @@ const MenuRow = ({ item }: { item: MenuItem }) => (
   >
     <div className="md:max-w-xl">
       <div className="flex items-baseline gap-3 mb-2">
-        <h4
-          className={`text-xl md:text-2xl text-[#e5e5e5] `}
-        >
-          {item.name}
-        </h4>
+        <h4 className={`text-xl md:text-2xl text-[#e5e5e5] `}>{item.name}</h4>
         {item.tags?.map((tag) => (
           <span
             key={tag}
@@ -146,16 +142,12 @@ const MenuRow = ({ item }: { item: MenuItem }) => (
           </span>
         ))}
       </div>
-      <p
-        className={`text-sm text-[#888] font-light leading-relaxed `}
-      >
+      <p className={`text-sm text-[#888] font-light leading-relaxed `}>
         {item.description}
       </p>
     </div>
     <div className="mt-2 md:mt-0">
-      <span
-        className={`text-lg md:text-xl text-[#d4d4d4] font-light `}
-      >
+      <span className={`text-lg md:text-xl text-[#d4d4d4] font-light `}>
         ${item.price}
       </span>
     </div>
@@ -176,9 +168,7 @@ export default function MenuPage() {
             >
               Season 04
             </span>
-            <h1
-              className={`text-5xl md:text-7xl lg:text-8xl italic  mb-8`}
-            >
+            <h1 className={`text-5xl md:text-7xl lg:text-8xl italic  mb-8`}>
               Culinary <span className="text-white/40">Edit</span>
             </h1>
             <p
@@ -202,9 +192,7 @@ export default function MenuPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h2
-                  className={`text-4xl md:text-5xl text-white `}
-                >
+                <h2 className={`text-4xl md:text-5xl text-white `}>
                   {category.title}
                 </h2>
                 <span

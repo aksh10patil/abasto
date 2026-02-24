@@ -6,6 +6,9 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Abasto booking site",
   description: "Abasto Site",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

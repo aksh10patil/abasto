@@ -112,11 +112,7 @@ export default function Reviews() {
           >
             Impressions
           </span>
-          <h3
-            className={`text-4xl md:text-5xl   text-white`}
-          >
-            Guest Book
-          </h3>
+          <h3 className={`text-4xl md:text-5xl   text-white`}>Guest Book</h3>
         </div>
 
         {/* Reviews Grid */}
@@ -145,9 +141,7 @@ export default function Reviews() {
                     />
                   </div>
                   <div>
-                    <h4
-                      className={`text-sm text-white tracking-wide `}
-                    >
+                    <h4 className={`text-sm text-white tracking-wide `}>
                       {review.name}
                     </h4>
                     <span
@@ -180,9 +174,7 @@ export default function Reviews() {
                     <div className="p-2 bg-rose-500/10 rounded-full group-hover:bg-rose-500/20 transition-colors">
                       <HeartIcon />
                     </div>
-                    <span
-                      className={`text-xs text-rose-200/80 font-medium `}
-                    >
+                    <span className={`text-xs text-rose-200/80 font-medium `}>
                       {review.likes}
                     </span>
                   </div>

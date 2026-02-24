@@ -3,32 +3,29 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-
 // --- Animation Variants ---
-
 
 const containerVariant = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, 
+      staggerChildren: 0.15,
       delayChildren: 0.2,
     },
   },
 };
 
-
 const blurReveal = {
   hidden: {
     opacity: 0,
     y: 20,
-    filter: "blur(10px)", 
+    filter: "blur(10px)",
   },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)", 
+    filter: "blur(0px)",
     transition: {
       duration: 1.2,
       ease: [0.25, 0.4, 0.25, 1] as const,
@@ -46,7 +43,6 @@ const lineGrow = {
 };
 
 export default function Philosophy() {
-
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -60,7 +56,6 @@ export default function Philosophy() {
       ref={ref}
       className="relative py-48 md:py-64 bg-[#0c0c0c] text-[#e5e5e5] px-6 overflow-hidden"
     >
-
       <motion.div
         style={{ y: yBackground }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[120px] pointer-events-none z-0"
@@ -79,7 +74,7 @@ export default function Philosophy() {
         className="relative z-10 max-w-2xl mx-auto text-center flex flex-col items-center"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-10%" }} 
+        viewport={{ once: true, margin: "-10%" }}
         variants={containerVariant}
       >
         {/* Label */}
@@ -97,9 +92,7 @@ export default function Philosophy() {
         />
 
         {/* Main Text - Broken into semantic lines for the stagger effect */}
-        <h2
-          className={`text-3xl md:text-5xl leading-[1.4]  text-[#d4d4d4]`}
-        >
+        <h2 className={`text-3xl md:text-5xl leading-[1.4]  text-[#d4d4d4]`}>
           <motion.div variants={blurReveal} className="mb-2">
             We believe in the quiet
           </motion.div>
@@ -113,9 +106,7 @@ export default function Philosophy() {
 
         {/* The "Pause in Time" Finale */}
         <motion.p variants={blurReveal} className="relative inline-block mt-8">
-          <span
-            className={`text-lg md:text-xl opacity-60 italic font-light `}
-          >
+          <span className={`text-lg md:text-xl opacity-60 italic font-light `}>
             "Dining is not just consumption; it is a pause in time."
           </span>
 

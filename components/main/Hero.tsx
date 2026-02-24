@@ -152,13 +152,13 @@ export default function Hero() {
         >
           Est. 1990 — Reimagined 2025
         </h2>
-     <h1
-  className="text-5xl md:text-7xl lg:text-8xl text-[#f0f0f0] leading-tight"
-  style={{ fontFamily: "Haarlem Deco" }}
->
-  Taste The <br />
-  <span className=" font-light opacity-90">Silence</span>
-</h1>
+        <h1
+          className="text-5xl md:text-7xl lg:text-8xl text-[#f0f0f0] leading-tight"
+          style={{ fontFamily: "Haarlem Deco" }}
+        >
+          Taste The <br />
+          <span className=" font-light opacity-90">Silence</span>
+        </h1>
         <div className="mt-12">
           <a
             href="https://abasto.resos.com/booking"
@@ -237,9 +237,7 @@ export default function Hero() {
             >
               Ambience
             </span>
-            <span
-              className={`text-sm text-white/90 italic `}
-            >
+            <span className={`text-sm text-white/90 italic `}>
               0{bgIndex + 1} — {HERO_SLIDES[bgIndex].label}
             </span>
             {/* Progress Bar */}
