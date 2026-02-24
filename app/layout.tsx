@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { manrope } from "./fonts";
 import "./globals.css";
 import Script from "next/script";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Abasto site",
+  title: "Abasto booking site",
   description: "Abasto Site",
 };
 
@@ -25,11 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${manrope.variable} ${manrope.className} antialiased`}>
         {children}
-
         <Script
           src="https://abasto.resos.com/embed/booking/widget.js"
           strategy="afterInteractive"

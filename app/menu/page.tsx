@@ -2,14 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Playfair_Display, Inter } from "next/font/google";
 import Image from "next/image";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 
 // --- Fonts ---
-const playfair = Playfair_Display({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 
 // --- Animation Variants ---
 const fadeUp = {
@@ -136,28 +133,28 @@ const MenuRow = ({ item }: { item: MenuItem }) => (
     <div className="md:max-w-xl">
       <div className="flex items-baseline gap-3 mb-2">
         <h4
-          className={`text-xl md:text-2xl text-[#e5e5e5] ${playfair.className}`}
+          className={`text-xl md:text-2xl text-[#e5e5e5] `}
         >
           {item.name}
         </h4>
         {item.tags?.map((tag) => (
           <span
             key={tag}
-            className={`text-[9px] border border-white/20 px-1 py-0.5 text-[#666] uppercase ${inter.className}`}
+            className={`text-[9px] border border-white/20 px-1 py-0.5 text-[#666] uppercase `}
           >
             {tag}
           </span>
         ))}
       </div>
       <p
-        className={`text-sm text-[#888] font-light leading-relaxed ${inter.className}`}
+        className={`text-sm text-[#888] font-light leading-relaxed `}
       >
         {item.description}
       </p>
     </div>
     <div className="mt-2 md:mt-0">
       <span
-        className={`text-lg md:text-xl text-[#d4d4d4] font-light ${inter.className}`}
+        className={`text-lg md:text-xl text-[#d4d4d4] font-light `}
       >
         ${item.price}
       </span>
@@ -175,17 +172,17 @@ export default function MenuPage() {
         <header className="pt-48 pb-24 px-6 text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
             <span
-              className={`block text-xs text-[#666] tracking-[0.3em] uppercase mb-6 ${inter.className}`}
+              className={`block text-xs text-[#666] tracking-[0.3em] uppercase mb-6 `}
             >
               Season 04
             </span>
             <h1
-              className={`text-5xl md:text-7xl lg:text-8xl italic ${playfair.className} mb-8`}
+              className={`text-5xl md:text-7xl lg:text-8xl italic  mb-8`}
             >
               Culinary <span className="text-white/40">Edit</span>
             </h1>
             <p
-              className={`max-w-md mx-auto text-[#888] font-light leading-relaxed ${inter.className}`}
+              className={`max-w-md mx-auto text-[#888] font-light leading-relaxed `}
             >
               A collection of dishes guided by the seasons, rooted in technique,
               and finished with fire.
@@ -206,12 +203,12 @@ export default function MenuPage() {
                 transition={{ duration: 0.8 }}
               >
                 <h2
-                  className={`text-4xl md:text-5xl text-white ${playfair.className}`}
+                  className={`text-4xl md:text-5xl text-white `}
                 >
                   {category.title}
                 </h2>
                 <span
-                  className={`text-xs text-[#666] uppercase tracking-[0.2em] mb-2 ${inter.className}`}
+                  className={`text-xs text-[#666] uppercase tracking-[0.2em] mb-2 `}
                 >
                   / {category.subtitle}
                 </span>
@@ -234,7 +231,7 @@ export default function MenuPage() {
 
         {/* 4. Footer Note / Dietary */}
         <div className="max-w-2xl mx-auto text-center px-6 opacity-40">
-          <p className={`text-xs leading-relaxed ${inter.className}`}>
+          <p className={`text-xs leading-relaxed `}>
             * A 20% service charge is included in every check to support fair
             wages for our culinary and service teams. <br />
             Please inform your server of any allergies. Raw or undercooked meats

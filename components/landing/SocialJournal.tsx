@@ -66,7 +66,7 @@ const SOCIAL_POSTS = [
   {
     id: 4,
     type: "image",
-    src: "/img1.jpg",
+    src: "/img1.webp",
     caption: "An atmosphere shaped by light, texture, and time.",
     likes: "1.1k",
     comments: 19,
@@ -75,7 +75,7 @@ const SOCIAL_POSTS = [
   {
     id: 5,
     type: "image",
-    src: "/img3.jpg",
+    src: "/img3.webp",
     caption: "Smoke, oak, and patience—nothing rushed.",
     likes: "860",
     comments: 14,
@@ -84,7 +84,7 @@ const SOCIAL_POSTS = [
   {
     id: 6,
     type: "image",
-    src: "/img2.jpg",
+    src: "/img2.webp",
     caption: "Where craft meets quiet confidence.",
     likes: "905",
     comments: 17,
@@ -93,7 +93,7 @@ const SOCIAL_POSTS = [
   {
     id: 7,
     type: "image",
-    src: "/img.jpg",
+    src: "/img.webp",
     caption: "A space designed for conversation, not distraction.",
     likes: "2.6k",
     comments: 92,

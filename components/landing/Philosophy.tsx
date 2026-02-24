@@ -2,10 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Playfair_Display, Inter } from "next/font/google";
 
-const playfair = Playfair_Display({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 
 // --- Animation Variants ---
 
@@ -88,7 +85,7 @@ export default function Philosophy() {
         {/* Label */}
         <motion.span
           variants={blurReveal}
-          className={`block text-xs tracking-[0.3em] text-[#666] mb-12 uppercase ${inter.className}`}
+          className={`block text-xs tracking-[0.3em] text-[#666] mb-12 uppercase `}
         >
           The Philosophy
         </motion.span>
@@ -101,7 +98,7 @@ export default function Philosophy() {
 
         {/* Main Text - Broken into semantic lines for the stagger effect */}
         <h2
-          className={`text-3xl md:text-5xl leading-[1.4] ${playfair.className} text-[#d4d4d4]`}
+          className={`text-3xl md:text-5xl leading-[1.4]  text-[#d4d4d4]`}
         >
           <motion.div variants={blurReveal} className="mb-2">
             We believe in the quiet
@@ -117,7 +114,7 @@ export default function Philosophy() {
         {/* The "Pause in Time" Finale */}
         <motion.p variants={blurReveal} className="relative inline-block mt-8">
           <span
-            className={`text-lg md:text-xl opacity-60 italic font-light ${playfair.className}`}
+            className={`text-lg md:text-xl opacity-60 italic font-light `}
           >
             "Dining is not just consumption; it is a pause in time."
           </span>

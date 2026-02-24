@@ -3,11 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Playfair_Display, Inter } from "next/font/google";
 
 // --- Fonts ---
-const playfair = Playfair_Display({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 
 // --- CONFIGURATION ---
 const MAIN_SLIDE_DURATION = 8000; // Background changes every 6s
@@ -17,19 +14,19 @@ const KITCHEN_FEED_DURATION = 8000; // Left feed changes every 4s (faster, feels
 const HERO_SLIDES = [
   {
     id: 1,
-    src: "/landing/landing-1.jpg",
+    src: "/landing/landing-1.webp",
     alt: "Dark textural restaurant interior",
     label: "The Dining Room",
   },
   {
     id: 2,
-    src: "/landing/landing-2.jpg",
+    src: "/landing/landing-2.webp",
     alt: "The Ambience",
     label: "The Ambience",
   },
   {
     id: 3,
-    src: "/landing/landing-3.jpg",
+    src: "/landing/landing-3.webp",
     alt: "Cocktail with smoke",
     label: "The Old Fashioned",
   },
@@ -40,21 +37,21 @@ const HERO_SLIDES = [
 const KITCHEN_UPDATES = [
   {
     id: "k1",
-    src: "/landing/food-1.jpg",
+    src: "/landing/food-1.webp",
     status: "Plating Service",
     dish: "Wild Mushroom Risotto",
     time: "Now",
   },
   {
     id: "k2",
-    src: "/landing/food-2.jpg",
+    src: "/landing/food-2.webp",
     status: "Resting",
     dish: "Wagyu A5 Strip",
     time: "2m ago",
   },
   {
     id: "k3",
-    src: "/landing/food-3.jpg",
+    src: "/landing/food-3.webp",
     status: "Prep Station",
     dish: "Hand-rolled Agnolotti",
     time: "5m ago",
@@ -151,22 +148,23 @@ export default function Hero() {
         variants={heroTextReveal}
       >
         <h2
-          className={`text-xs md:text-sm tracking-[0.3em] text-white/70 mb-6 uppercase ${inter.className}`}
+          className={`text-xs md:text-sm tracking-[0.3em] text-white/70 mb-6 uppercase `}
         >
           Est. 1990 — Reimagined 2025
         </h2>
-        <h1
-          className={`text-5xl md:text-7xl lg:text-8xl text-[#f0f0f0] leading-tight ${playfair.className}`}
-        >
-          Taste the <br />
-          <span className="italic font-light opacity-90">Silence.</span>
-        </h1>
+     <h1
+  className="text-5xl md:text-7xl lg:text-8xl text-[#f0f0f0] leading-tight"
+  style={{ fontFamily: "Haarlem Deco" }}
+>
+  Taste The <br />
+  <span className=" font-light opacity-90">Silence</span>
+</h1>
         <div className="mt-12">
           <a
             href="https://abasto.resos.com/booking"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-xs md:text-sm tracking-[0.2em] text-white border-b border-white/30 pb-2 hover:border-white transition-all duration-700 uppercase ${inter.className}`}
+            className={`text-xs md:text-sm tracking-[0.2em] text-white border-b border-white/30 pb-2 hover:border-white transition-all duration-700 uppercase `}
           >
             Book a Table
           </a>
@@ -181,7 +179,7 @@ export default function Hero() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
           </span>
           <span
-            className={`text-[10px] text-white/50 tracking-widest uppercase ${inter.className}`}
+            className={`text-[10px] text-white/50 tracking-widest uppercase `}
           >
             Kitchen Live
           </span>
@@ -209,12 +207,12 @@ export default function Hero() {
             {/* Info */}
             <div className="flex flex-col">
               <span
-                className={`text-[9px] uppercase tracking-wider text-green-400 mb-1 ${inter.className}`}
+                className={`text-[9px] uppercase tracking-wider text-green-400 mb-1 `}
               >
                 {KITCHEN_UPDATES[feedIndex].status}
               </span>
               <span
-                className={`text-sm text-white font-serif italic leading-none ${playfair.className}`}
+                className={`text-sm text-white font-serif italic leading-none `}
               >
                 {KITCHEN_UPDATES[feedIndex].dish}
               </span>
@@ -235,12 +233,12 @@ export default function Hero() {
             className="text-right"
           >
             <span
-              className={`block text-[10px] text-white/40 tracking-widest uppercase mb-1 ${inter.className}`}
+              className={`block text-[10px] text-white/40 tracking-widest uppercase mb-1 `}
             >
               Ambience
             </span>
             <span
-              className={`text-sm text-white/90 italic ${playfair.className}`}
+              className={`text-sm text-white/90 italic `}
             >
               0{bgIndex + 1} — {HERO_SLIDES[bgIndex].label}
             </span>

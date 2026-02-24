@@ -3,11 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Playfair_Display, Inter } from "next/font/google";
 
 // --- Fonts ---
-const playfair = Playfair_Display({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 
 // --- Icons ---
 const StarIcon = () => (
@@ -55,7 +52,7 @@ const REVIEWS = [
     id: 1,
     name: "Elena R.",
     role: "Local Guide",
-    image: "/landing/people-1.jpg",
+    image: "/landing/people-1.webp",
     rating: 5,
     text: "The silence here is loud. It forces you to focus on the smoke, the texture, the wine. A masterclass in atmosphere.",
     likes: 128,
@@ -66,7 +63,7 @@ const REVIEWS = [
     id: 2,
     name: "Marcus T.",
     role: "Sommelier",
-    image: "/landing/people-2.jpg",
+    image: "/landing/people-2.webp",
     rating: 5,
     text: "Their Barolo selection is impeccable. The staff moves like ghosts—present only when you need them. Pure elegance.",
     likes: 342,
@@ -77,7 +74,7 @@ const REVIEWS = [
     id: 3,
     name: "Adam Jenkins",
     role: "Food Critic",
-    image: "/landing/people-3.jpg",
+    image: "/landing/people-3.webp",
     rating: 5,
     text: "I haven't tasted a risotto this honest since I was in Milan really impressed. No gimmicks, just perfect execution.",
     likes: 890,
@@ -111,12 +108,12 @@ export default function Reviews() {
         {/* Header */}
         <div className="text-center mb-24">
           <span
-            className={`block text-xs tracking-[0.2em] text-[#666] mb-4 uppercase ${inter.className}`}
+            className={`block text-xs tracking-[0.2em] text-[#666] mb-4 uppercase `}
           >
             Impressions
           </span>
           <h3
-            className={`text-4xl md:text-5xl italic ${playfair.className} text-white`}
+            className={`text-4xl md:text-5xl   text-white`}
           >
             Guest Book
           </h3>
@@ -149,12 +146,12 @@ export default function Reviews() {
                   </div>
                   <div>
                     <h4
-                      className={`text-sm text-white tracking-wide ${playfair.className}`}
+                      className={`text-sm text-white tracking-wide `}
                     >
                       {review.name}
                     </h4>
                     <span
-                      className={`text-[10px] text-[#666] uppercase tracking-wider ${inter.className}`}
+                      className={`text-[10px] text-[#666] uppercase tracking-wider `}
                     >
                       {review.role}
                     </span>
@@ -170,7 +167,7 @@ export default function Reviews() {
 
               {/* Review Text */}
               <p
-                className={`text-lg text-[#ccc] font-light leading-relaxed mb-10 ${playfair.className}`}
+                className={`text-lg text-[#ccc] font-light leading-relaxed mb-10 `}
               >
                 "{review.text}"
               </p>
@@ -184,7 +181,7 @@ export default function Reviews() {
                       <HeartIcon />
                     </div>
                     <span
-                      className={`text-xs text-rose-200/80 font-medium ${inter.className}`}
+                      className={`text-xs text-rose-200/80 font-medium `}
                     >
                       {review.likes}
                     </span>
@@ -193,7 +190,7 @@ export default function Reviews() {
 
                 {/* Date */}
                 <span
-                  className={`text-[10px] text-[#444] uppercase tracking-widest ${inter.className}`}
+                  className={`text-[10px] text-[#444] uppercase tracking-widest `}
                 >
                   {review.date}
                 </span>
