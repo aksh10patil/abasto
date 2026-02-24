@@ -1,13 +1,15 @@
 import React from "react";
 import { inter, playfair } from "@/app/fonts";
 
-
 const Footer = () => (
   <footer className="bg-[#050505] text-[#999] py-24 px-6 border-t border-white/5">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
-      
       <div className="space-y-6">
-        <h5 className={`text-white text-lg tracking-widest uppercase mb-8 ${inter.className}`}>ABASTO</h5>
+        <h5
+          className={`text-white text-lg tracking-widest uppercase mb-8 ${inter.className}`}
+        >
+          ABASTO
+        </h5>
         <div className={`space-y-2 text-sm font-light ${inter.className}`}>
           <p>Via San Gottardo 32, 6596</p>
           <p>Gordola, Svizzera</p>
@@ -19,14 +21,27 @@ const Footer = () => (
       </div>
 
       <div className="flex flex-col items-start md:items-end">
-        <a href="mailto:reservations@ABASTO.com" className={`text-xl md:text-2xl text-[#d4d4d4] hover:text-white transition-colors mb-6 ${playfair.className} italic`}>
+        <a
+          href="https://abasto.resos.com/booking"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-md tracking-[0.2em] uppercase text-[#d4d4d4] border-b border-white/30 pb-2 hover:border-white hover:text-white transition-all duration-700 mb-8 ${inter.className}`}
+        >
+          Reserve
+        </a>
+        <a
+          href="mailto:reservations@ABASTO.com"
+          className={`text-xl md:text-2xl text-[#d4d4d4] hover:text-white transition-colors mb-6 ${playfair.className} italic`}
+        >
           reservations@abasto.com
         </a>
-        <p className={`text-xs tracking-widest uppercase opacity-40 ${inter.className}`}>
-          © 2025 ABASTO Restaurant. All Rights Reserved.
+
+        <p
+          className={`text-xs tracking-widest uppercase opacity-40 ${inter.className}`}
+        >
+          © {new Date().getFullYear()} ABASTO Restaurant. All Rights Reserved.
         </p>
       </div>
-
     </div>
   </footer>
 );
